@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>威樂 - 新會員14天限時任務</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: #0b0c10;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: #fff;
+        }
+
+        .container {
+            position: relative;
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.8);
+            overflow: hidden;
+            background: #000;
+        }
+
+        .poster-img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        /* 全螢幕背景與按鈕點擊皆導流至指定 LINE 連結 */
+        .full-link {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 5;
+            text-decoration: none;
+        }
+
+        /* 右下角圓形按鈕呼吸發光提示動畫 */
+        .pulse-effect {
+            position: absolute;
+            border-radius: 50%;
+            box-shadow: 0 0 15px rgba(255, 215, 0, 0.6);
+            animation: pulse 1.8s infinite ease-in-out;
+            pointer-events: none;
+            z-index: 6;
+            bottom: 4%;
+            right: 5%;
+            width: 16%;
+            padding-bottom: 16%;
+        }
+
+        @keyframes pulse {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0.7);
+            }
+            70% {
+                transform: scale(1.05);
+                box-shadow: 0 0 0 15px rgba(255, 215, 0, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 215, 0, 0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- 海報圖片 (請將圖片存為 poster.png 放於同一目錄下) -->
+        <img src="poster.png" alt="威樂 新會員14天限時任務" class="poster-img">
+
+        <!-- 全圖點擊帶入導流連結 -->
+        <a href="https://line.me/ti/p/VKP6Ls3kyh" class="full-link" target="_blank" rel="noopener noreferrer"></a>
+
+        <!-- 右下角金色呼吸燈動畫，提升點擊轉換率 -->
+        <div class="pulse-effect"></div>
+    </div>
+
+</body>
+</html>
